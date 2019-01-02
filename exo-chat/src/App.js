@@ -4,7 +4,7 @@ import InputForm from './component/InputForm';
 import ChatManager from './controller/ChatManager';
 import UserList from './component/UserList';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 
