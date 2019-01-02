@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbd539f3-61dd-4db0-8f59-b32359401455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exo-chat/src/component/UserList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exo-backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/exo-backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo-chat/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/exo-chat/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo-chat/src/component/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/exo-chat/src/component/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo-chat/src/controller/ChatManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/exo-chat/src/controller/ChatManager.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,12 +33,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3111" />
+          <entry key="js" value="3848" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="3111" />
+          <entry key="JavaScript" value="3848" />
         </counts>
       </usages-collector>
     </session>
@@ -100,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exo-chat/src/controller/ChatManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+            <state relative-caret-position="218">
+              <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -109,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exo-backend/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="803">
+              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -1507,12 +1502,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546422901136</updated>
-      <workItem from="1546422902430" duration="14410000" />
+      <workItem from="1546422902430" duration="18213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14410000" />
+    <option name="totallyTimeSpent" value="18213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-24" width="1922" height="1105" extended-state="6" />
@@ -1604,6 +1599,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exo-chat/src/controller/ChatManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exo-chat/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1614,17 +1616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exo-chat/src/controller/ChatManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exo-backend/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state relative-caret-position="803">
+          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
         </state>
       </provider>
     </entry>
