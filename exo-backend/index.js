@@ -4,8 +4,14 @@ var io = require('socket.io')(http);
 
 let users = [];
 
-app.get('/get_users.json', function (req, res) {
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
+app.get('/get_users.json', function (req, res) {
+    res.send(JSON.stringify(users));
 });
 
 io.on('connection', function (socket) {
@@ -19,7 +25,7 @@ io.on('connection', function (socket) {
     }
     else {
         users.push(newUsername);
-        socket.broadcast.emit('new_user', newUsername);
+        socket.broadcast.emit('user_connected', newUsername);
     }
 
     // ========= NOUVEAU MESSAGE ===========
@@ -43,6 +49,11 @@ io.on('connection', function (socket) {
         if (index > -1) {
             users.splice(index, 1);
         }
+
+        socket.broadcast.emit(
+            'user_disconnected',
+            newUsername
+        );
     });
 });
 

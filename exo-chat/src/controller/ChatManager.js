@@ -23,12 +23,40 @@ class ChatManager {
     }
 
     receiveMessage(message) {
-        console.log("received");
-        console.log(message);
+        // console.log("received");
+        // console.log(message);
 
         this.callbacks.forEach((c) => {
             if (c.name === 'message_received') {
                 c.call(message);
+            }
+        });
+    }
+
+    otherUserDisconnected(username) {
+        console.log("disconnected " + username);
+
+        this.callbacks.forEach((c) => {
+            if (c.name === 'user_disconnected') {
+                c.call(username);
+            }
+        });
+    }
+
+    otherUserConnected(username) {
+        console.log("connected " + username);
+
+        this.receiveMessage(
+            {
+                senderId: "Général",
+                text: username + " arrive pour animer les foules",
+                date: (new Date()).toLocaleDateString()
+            }
+        );
+
+        this.callbacks.forEach((c) => {
+            if (c.name === 'user_connected') {
+                c.call(username);
             }
         });
     }
@@ -38,6 +66,12 @@ class ChatManager {
         this.socket = openSocket('http://localhost:3001', {query: "username=" + username});
         this.socket.on('message_received', (message) => {
             this.receiveMessage(message);
+        });
+        this.socket.on('user_connected', (username) => {
+            this.otherUserConnected(username);
+        });
+        this.socket.on('user_disconnected', (username) => {
+            this.otherUserDisconnected(username);
         })
     }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class MessageList extends Component {
     render() {
@@ -6,11 +6,12 @@ class MessageList extends Component {
             <ul className="message-list">
                 {this.props.messages.map((message, index) => {
                     return (
-                        <li  key={message.id} className="message">
-                            <div>{message.senderId} - le {message.date}</div>
-                            <div>{message.text}</div>
+                        <li key={index} className="message">
+                            <div>
+                                <span>{message.date}</span> <span>{message.senderId}</span>: {message.text}
+                            </div>
                         </li>
-                    )
+                    );
                 })}
             </ul>
         )
