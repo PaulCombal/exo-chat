@@ -13,19 +13,19 @@ class UserList extends Component {
                 <h4>
                     Utilisateurs connectés:
                 </h4>
-                <ul>
+                <div>
                     {
                         this.props.users.map(
                             (username, index) => {
                                 return (
-                                    <li key={index} className="user">
+                                    <span key={index} className="user">
                                         <div className="user-link" onClick={() => this.clickedCallback(username)}>@{username}</div>
-                                    </li>
+                                    </span>
                                 );
                             }
                         )
                     }
-                </ul>
+                </div>
             </div>
         )
     }

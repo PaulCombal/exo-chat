@@ -4,6 +4,13 @@ class MessageList extends Component {
     render() {
         return (
             <ul className="message-list">
+                <li>
+                    <div className="message message-general">
+                        <div className="message-text">
+                            Bienvenue dans le chat!
+                        </div>
+                    </div>
+                </li>
                 {this.props.messages.map((message, index) => {
                     return (
                         <li key={index} className={"message " + (message.className || "message-incoming")}>

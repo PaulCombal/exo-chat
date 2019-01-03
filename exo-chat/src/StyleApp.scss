@@ -25,7 +25,11 @@ html {
 }
 
 .user {
-  margin: 3px auto;
+  display: inline-block;
+  margin: 5px 5px auto auto;
+  padding: 5px;
+  border: 1px solid #5c6afb;
+  border-radius: 3px;
 }
 
 .user-link {
@@ -41,6 +45,7 @@ html {
     width: 80%;
     height: 25px;
     margin: 0 auto;
+    padding: 5px;
     display: block;
   }
 }
