@@ -2,6 +2,7 @@
   height: 50vh;
   overflow-y: scroll;
   margin: auto;
+  padding-bottom: 5px;
 }
 
 .message {
@@ -66,4 +67,5 @@
   padding: 10px;
   border-radius: 5px;
   color: white;
+  word-break: break-all;
 }
