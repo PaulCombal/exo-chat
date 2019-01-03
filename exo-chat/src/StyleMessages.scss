@@ -1,12 +1,11 @@
 .message-list {
   height: 50vh;
   overflow-y: scroll;
-  width: 80%;
   margin: auto;
 }
 
 .message {
-  padding: 8px;
+  padding: 8px 8px 0;
 }
 
 .message-emitter {
@@ -20,6 +19,12 @@
 
 .message-incoming {
   text-align: left;
+  + .message-incoming {
+    padding-top: 1px;
+    .message-emitter {
+      display: none;
+    }
+  }
   .message-text {
     background: darkgray;
     border-top-left-radius: 0;
@@ -34,6 +39,12 @@
 
 .message-outcoming {
   text-align: right;
+  + .message-outcoming {
+    padding-top: 1px;
+    .message-emitter {
+      display: none;
+    }
+  }
   .message-text {
     background: #5973fb;
     border-top-right-radius: 0;

@@ -11,7 +11,7 @@ class UserList extends Component {
         return (
             <div className="user-list">
                 <h4>
-                    Utilisateurs connectés:
+                    Murmurer à:
                 </h4>
                 <div>
                     {

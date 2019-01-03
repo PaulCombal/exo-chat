@@ -68,13 +68,15 @@ class App extends Component {
                     </h1>
                 </header>
 
-                <MessageList
-                    messages={this.state.messages}
-                />
+                <div className="chat-messages-input-wrapper">
+                    <MessageList
+                        messages={this.state.messages}
+                    />
 
-                <InputForm
-                    sendMessageCallback={(message) => this.chatManager.sendMessage(message)}
-                />
+                    <InputForm
+                        sendMessageCallback={(message) => this.chatManager.sendMessage(message)}
+                    />
+                </div>
 
                 <UserList users={this.state.users}/>
             </div>

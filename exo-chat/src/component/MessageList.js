@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 
 class MessageList extends Component {
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <ul className="message-list">

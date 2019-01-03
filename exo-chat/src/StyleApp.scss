@@ -39,30 +39,36 @@ html {
 }
 
 .send-message-form {
-  margin: 10px auto;
-
   input {
-    width: 80%;
+    width: calc(100% - 10px);
     height: 25px;
     margin: 0 auto;
     padding: 5px;
     display: block;
+    border: none;
+    background: #f1f1f1;
+    overflow: hidden;
   }
+  input:focus {
+    outline: none;
+  }
+}
+
+.chat-messages-input-wrapper {
+  width: 80%;
+  margin: auto auto 15px;
+  border: 1px solid #e2e2e2;
+
 }
 
 
 header {
   text-align: center;
-  height: 20vh;
-  line-height: 20vh;
-  border-bottom: 1px solid darkgray;
+  height: 10vh;
+  line-height: 10vh;
   margin-bottom: 15px;
 }
 
 li {
   list-style-type: none;
-}
-
-ul {
-  padding: 0;
 }
