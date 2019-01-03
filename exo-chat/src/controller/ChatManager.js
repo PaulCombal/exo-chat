@@ -11,13 +11,16 @@ class ChatManager {
     }
 
     sendMessage(messageText) {
+        if(messageText.length === 0) return;
+
         console.log("sent " + messageText);
         this.socket.emit('message_written', messageText);
         this.receiveMessage(
             {
                 senderId: "Vous",
                 text: messageText,
-                date: (new Date()).toLocaleDateString()
+                date: (new Date()).toLocaleDateString(),
+                className: "message-outcoming"
             }
         );
     }
@@ -50,7 +53,8 @@ class ChatManager {
             {
                 senderId: "Général",
                 text: username + " arrive pour animer les foules",
-                date: (new Date()).toLocaleDateString()
+                date: (new Date()).toLocaleDateString(),
+                className: "message-general"
             }
         );
 

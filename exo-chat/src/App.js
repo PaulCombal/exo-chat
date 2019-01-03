@@ -4,7 +4,8 @@ import InputForm from './component/InputForm';
 import ChatManager from './controller/ChatManager';
 import UserList from './component/UserList';
 import logo from './logo.svg';
-import './App.scss';
+import './StyleApp.scss';
+import './StyleMessages.scss';
 
 class App extends Component {
 
@@ -30,6 +31,9 @@ class App extends Component {
         this.chatManager.addCallback(
             'message_received',
             (message) => {
+                if (message.className !== "message-outcoming")
+                    new Audio('notif.mp3').play();
+
                 this.state.messages.push(message);
                 this.setState(this.state);
             }
@@ -52,6 +56,7 @@ class App extends Component {
         );
 
         this.chatManager.connect(this.localUsername);
+        document.title = "Chat as " + this.localUsername;
     }
 
     render() {

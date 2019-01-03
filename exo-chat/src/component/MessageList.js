@@ -6,9 +6,15 @@ class MessageList extends Component {
             <ul className="message-list">
                 {this.props.messages.map((message, index) => {
                     return (
-                        <li key={index} className="message">
+                        <li key={index} className={"message " + (message.className || "message-incoming")}>
                             <div>
-                                <span>{message.date}</span> <span>{message.senderId}</span>: {message.text}
+                                <div className="message-emitter">
+                                    <span>{message.date}</span>
+                                    <span>{message.senderId}</span>
+                                </div>
+                                <div className="message-text">
+                                    {message.text}
+                                </div>
                             </div>
                         </li>
                     );

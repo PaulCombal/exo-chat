@@ -1,0 +1,58 @@
+.message-list {
+  height: 50vh;
+  overflow-y: scroll;
+  width: 80%;
+  margin: auto;
+}
+
+.message {
+  padding: 8px;
+}
+
+.message-emitter {
+  color: #a2a2a2;
+  font-size: small;
+  margin-bottom: 5px;
+  span {
+    margin-right: 10px;
+  }
+}
+
+.message-incoming {
+  text-align: left;
+  .message-text {
+    background: darkgray;
+    border-top-left-radius: 0;
+  }
+}
+
+.message-whisper {
+  .message-text {
+    background: #ff774b;
+  }
+}
+
+.message-outcoming {
+  text-align: right;
+  .message-text {
+    background: #5973fb;
+    border-top-right-radius: 0;
+  }
+}
+
+.message-general {
+  text-align: center;
+  .message-emitter {
+    display: none;
+  }
+  .message-text {
+    color: gray;
+  }
+}
+
+.message-text {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}

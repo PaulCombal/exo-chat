@@ -31,6 +31,8 @@ io.on('connection', function (socket) {
 
     // ========= NOUVEAU MESSAGE ===========
     socket.on('message_written', function (message) {
+        if (message.length === 0)
+            return;
 
         // =========== WHISPER =============
         if (message.indexOf("@") === 0) {
@@ -49,7 +51,8 @@ io.on('connection', function (socket) {
                         {
                             senderId: newUsername,
                             text: message,
-                            date: (new Date()).toLocaleDateString()
+                            date: (new Date()).toLocaleDateString(),
+                            className: "message-whisper"
                         }
                     );
                 }
